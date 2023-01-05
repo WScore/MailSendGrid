@@ -1,0 +1,30 @@
+{
+    "name": "wscore/mail_sendgrid",
+    "description": "sends mails using SendGrid and MailQueue",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "sendgrid/sendgrid": "~7"
+    },
+    "require-dev": {
+        "wscore/mailqueue": ">=0.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/WScore/MailQueue"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wscore\\MailSendgrid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "亀井亜佐夫",
+            "email": "asao.kamei@gmail.com"
+        }
+    ]
+}
