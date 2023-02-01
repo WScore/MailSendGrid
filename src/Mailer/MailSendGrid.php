@@ -43,7 +43,11 @@ class MailSendGrid
                     $email->setFrom($value);
                 }
             } elseif( $key === 'reply') {
-                $email->setReplyTo($value);
+                if (is_array($value)) {
+                    $email->setReplyTo($value['address'], $value['name']);
+                } else {
+                    $email->setReplyTo($value);
+                }
             } elseif( $key === 'cc') {
                 foreach ($this->listEmails($value) as $mail) {
                     $email->addCc($mail);
